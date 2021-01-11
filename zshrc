@@ -9,6 +9,9 @@ fi
 HISTSIZE=10000
 SAVEHIST=10000
 
+autoload -Uz compinit
+compinit
+
 setopt append_history
 setopt extended_history
 setopt hist_expire_dups_first
