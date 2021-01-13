@@ -1,19 +1,27 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
 export ZSH="/Users/serdar/.oh-my-zsh"
-
 ZSH_THEME="apple"
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
 ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
 
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# System tools
 
+eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+
+
+
+#
 # Examples from the default
+#
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
